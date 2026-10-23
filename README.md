@@ -40,6 +40,16 @@ Aşağıdaki görselde kaplumbağanın hareketi görülmektedir. Kaplumbağa ekr
 
 ![node_log](node_log.jpeg)
 
+### 4. Pose (Konum) Çıktısı
+Kaplumbağanın anlık konum bilgileri, `/turtle1/pose` konusu üzerinden takip edilmektedir. Bu veriler arasında yatay konum (`x`), dikey konum (`y`), yön açısı (`theta`), doğrusal hız (`linear_velocity`) ve açısal hız (`angular_velocity`) yer almaktadır. Aşağıdaki terminal çıktısı, simülasyon sırasındaki anlık konum ve hareket verilerinin akışını göstermektedir:
+
+![pose](pose.jpeg)
+
+### 5. Cmd Vel (Hareket Komutları) Çıktısı
+`/turtle1/cmd_vel` konusu üzerinden kaplumbağanın hareketini kontrol etmek için `geometry_msgs/msg/Twist` mesajları gönderilmektedir[cite: 6]. Bu mesajlarda bulunan `linear` alanı doğrusal hareket hızını, `angular` alanı ise açısal hareket hızını belirtmektedir[cite: 6]. Aşağıdaki terminal çıktısı, kaplumbağaya iletilen anlık hareket komutlarını göstermektedir[cite: 6]:
+
+![cmd_vel](cmd_vel.jpeg)
+
 ---
 
 ## ⚙️ Düğüm Nasıl Çalışır?
@@ -109,6 +119,8 @@ turtle_duvar_py/
 ├── turtlesim.jpeg
 ├── turtlesim_node.jpeg
 ├── node_log.jpeg
+├── pose.jpeg
+├── cmd_vel.jpeg
 ├── package.xml
 ├── setup.py
 ├── setup.cfg
